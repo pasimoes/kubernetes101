@@ -44,7 +44,7 @@ metadata:
 
 E executar:
 
-```$ kubectl create f ./<meu-namespace>.yaml```
+```$ kubectl create -f ./<meu-namespace>.yaml```
 
 Alternativamente:
 
@@ -106,7 +106,7 @@ kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml --nam
 Neste momento que temos um aplicação rodando vamos fazer o processo de solicitar a atualização dela (através da atualização da versão de sua imagem)
 
 ```
-kubectl set image deployment/nginx-deployment nginx=nginx:1.9.1 --record true --namespace=development
+kubectl set image deployment/nginx-deployment nginx=nginx:1.9.1 --record=true --namespace=development
 ```
 
 Para ver o *rollout* acontecendo:
