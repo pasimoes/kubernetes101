@@ -44,7 +44,7 @@ metadata:
 
 E executar:
 
-```$ kubectl create f ./<meu-namespace>.yaml```
+```$ kubectl create -f ./<meu-namespace>.yaml```
 
 Alternativamente:
 
