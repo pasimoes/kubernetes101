@@ -215,4 +215,10 @@ kubectl get pods --selector="run=load-balancer-example" --output=wide
 
 curl http://public-node-ip:node-port
 > Hello Kubernetes!
+
+### Limpar o ambiente
+kubectl delete services example-service
+kubectl delete deployment hello-world
+
+
   
