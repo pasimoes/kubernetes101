@@ -213,6 +213,6 @@ kubectl get pods --selector="run=load-balancer-example" --output=wide
 
 ### Use the node address and node port to access the Hello World application:
 
-curl http://<public-node-ip>:<node-port>
+curl http://public-node-ip:node-port
 > Hello Kubernetes!
   
