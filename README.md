@@ -187,3 +187,32 @@ kubectl delete services my-service --namespace=production
 kubectl delete deployment hello-world --namespace=production
 ```
 
+## Trabalhando com Services
+
+### Criando um Service
+
+A seguir, é apresentado um exemplo de Servico. Ele microservico node que escreve "Hello Kubernetes!".
+
+kubectl apply -f https://k8s.io/examples/service/access/hello-application.yam
+
+### Verificando o Deployment
+
+kubectl describe deployments hello-world
+
+### Create a Service object that exposes the deployment:###
+
+kubectl expose deployment hello-world --type=NodePort --name=example-service
+
+### Display information about the Service:
+
+kubectl describe services example-service
+
+### List the pods that are running the Hello World application:
+
+kubectl get pods --selector="run=load-balancer-example" --output=wide
+
+### Use the node address and node port to access the Hello World application:
+
+curl http://<public-node-ip>:<node-port>
+> Hello Kubernetes!
+  
